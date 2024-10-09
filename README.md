@@ -89,7 +89,7 @@ Data columns (total 8 columns):
  6   CustomerID   406829 non-null  float64
  7   Country      541909 non-null  object
 dtypes: datetime64 , float64(2), int64(1), object(4)
-memory usage: 33.1+ MB
+memory usage: 33.1+ MB```
 
 ![Cluster de Clientes](https://github.com/user-attachments/assets/fe745fb6-4de1-4612-96f5-b0d4cd3011d3)
 
