@@ -37,39 +37,11 @@ Essas mudanças revelam novos perfis, como clientes com baixo rendimento e gasto
 
 ### 3) Tentar outro dataset do Kaggle para exercitar a técnica com dados diferentes.
 
-`Primeiras linhas do dataset:
-  InvoiceNo StockCode                          Description  Quantity         InvoiceDate  UnitPrice  CustomerID         Country
-0    536365    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6 2010-12-01 08:26:00       2.55     17850.0  United Kingdom
-1    536365     71053                  WHITE METAL LANTERN         6 2010-12-01 08:26:00       3.39     17850.0  United Kingdom
-2    536365    84406B       CREAM CUPID HEARTS COAT HANGER         8 2010-12-01 08:26:00       2.75     17850.0  United Kingdom
-3    536365    84029G  KNITTED UNION FLAG HOT WATER BOTTLE         6 2010-12-01 08:26:00       3.39     17850.0  United Kingdom
-4    536365    84029E       RED WOOLLY HOTTIE WHITE HEART.         6 2010-12-01 08:26:00       3.39     17850.0  United Kingdom`
-
-Informações gerais do dataset:
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 541909 entries, 0 to 541908
-Data columns (total 8 columns):
- #   Column       Non-Null Count   Dtype
----  ------       --------------   -----
- 0   InvoiceNo    541909 non-null  object        
- 1   StockCode    541909 non-null  object
- 2   Description  540455 non-null  object
- 3   Quantity     541909 non-null  int64
- 4   InvoiceDate  541909 non-null  datetime64[ns]
- 5   UnitPrice    541909 non-null  float64
- 6   CustomerID   406829 non-null  float64
- 7   Country      541909 non-null  object
-dtypes: datetime64[ns](1), float64(2), int64(1), object(4)
-memory usage: 33.1+ MB
-
 ![Cluster de Clientes](https://github.com/user-attachments/assets/80417f90-6248-4817-be00-6819ccf20922)
 
-Análise dos clusters:
-          CustomerID    Frequency     TotalSpent  TotalQuantity
-Cluster
-0        15301.41028    83.146562    1601.825493     937.420468
-1        16661.00000   711.750000  225721.652500  103007.250000
-2        14649.00000  2395.133333   72682.466000   47137.600000
+ "name": "stdout",
+     "output_type": "stream",
+     "text": [
 
 Analisando os Clusters, nós temos:
 
@@ -93,7 +65,9 @@ Clientes únicos, com padrões de comportamento bastante diferentes do restante.
 
 ### 4) Realizar testes sobre outros métodos de clustering (DBSCAN, Agglomerative) e os benefícios de diferentes abordagens, dependendo dos dados.
 
-Primeiras linhas do dataset:
+## Primeiras Linhas do Dataset
+
+```plaintext
   InvoiceNo StockCode                          Description  Quantity         InvoiceDate  UnitPrice  CustomerID         Country
 0    536365    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6 2010-12-01 08:26:00       2.55     17850.0  United Kingdom
 1    536365     71053                  WHITE METAL LANTERN         6 2010-12-01 08:26:00       3.39     17850.0  United Kingdom
@@ -101,7 +75,6 @@ Primeiras linhas do dataset:
 3    536365    84029G  KNITTED UNION FLAG HOT WATER BOTTLE         6 2010-12-01 08:26:00       3.39     17850.0  United Kingdom
 4    536365    84029E       RED WOOLLY HOTTIE WHITE HEART.         6 2010-12-01 08:26:00       3.39     17850.0  United Kingdom
 
-Informações gerais do dataset:
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 541909 entries, 0 to 541908
 Data columns (total 8 columns):
@@ -115,12 +88,16 @@ Data columns (total 8 columns):
  5   UnitPrice    541909 non-null  float64
  6   CustomerID   406829 non-null  float64
  7   Country      541909 non-null  object
-dtypes: datetime64[ns](1), float64(2), int64(1), object(4)
+dtypes: datetime64 , float64(2), int64(1), object(4)
 memory usage: 33.1+ MB
 
 ![Cluster de Clientes](https://github.com/user-attachments/assets/fe745fb6-4de1-4612-96f5-b0d4cd3011d3)
 
-Análise dos clusters:
+## Análise dos Clusters
+
+### Cluster Analysis - KMeans
+
+```plaintext
                  CustomerID    Frequency     TotalSpent  TotalQuantity  DBSCAN_Cluster  Agglomerative_Cluster
 KMeans_Cluster
 0               15301.41028    83.146562    1601.825493     937.420468       -0.002778                    0.0
@@ -134,6 +111,7 @@ DBSCAN_Cluster
 -1              15123.129032  1447.290323  78832.552258   44539.161290        1.096774               0.709677
  0              15301.684003    81.963780   1501.648197     879.289064        0.000000               0.000000
 
+
  ![Cluster de Clientes Agglomerative](https://github.com/user-attachments/assets/13e6611b-4961-4990-a719-c231ce933964)
 
                           CustomerID    Frequency     TotalSpent  TotalQuantity  KMeans_Cluster  DBSCAN_Cluster
@@ -141,3 +119,4 @@ Agglomerative_Cluster
 0                      15301.249306    83.752315    1604.268739     938.644213        0.000463       -0.003009
 1                      15155.500000   917.571429  121233.271429   69102.428571        1.714286       -1.000000
 2                      14899.000000  5807.000000   70925.287500   36358.750000        2.000000       -1.000000
+
