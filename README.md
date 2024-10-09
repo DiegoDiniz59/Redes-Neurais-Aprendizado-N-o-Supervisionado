@@ -65,13 +65,24 @@ Clientes únicos, com padrões de comportamento bastante diferentes do restante.
 
 ### 4) Realizar testes sobre outros métodos de clustering (DBSCAN, Agglomerative) e os benefícios de diferentes abordagens, dependendo dos dados.
 
+Cada algoritmo de clustering apresenta vantagens e desvantagens, dependendo do tipo de dados:
+
+K-Means tem como benefícios a sua simplicidade e eficiência em termos de tempo computacional. Ele também tem um bom desempenho quando os clusters têm formas esféricas e tamanhos semelhantes.
+Já as suas limitações é que ele é sensível a outliers e à inicialização dos centróides e não funciona bem quando os clusters têm formas irregulares ou densidades variáveis:
+
 ![Cluster de Clientes](https://github.com/user-attachments/assets/fe745fb6-4de1-4612-96f5-b0d4cd3011d3)
+
+DBSCAN tem como benefícios sua capacidade de identificar clusters de qualquer forma, inclusive clusters complexos e de bordas irregulares. Ele lida bem com outlies, classificando-os como ruído.
+Já as limitações dele são parâmetros eps (distâncoa máxima) e min_samples (mínimo de pontos em um cluster) que precisam ser ajustados cuidadosamente. Ele também não é eficiente para dados com densidade variada:
 
 ![Cluster de Clientes DBSCAN](https://github.com/user-attachments/assets/d6639abf-4932-4103-8435-695ca45983a7)
 
+Agglomerative Clustering tem como benefícios o fato de não precisar de um número inicial de clusters. Ele tem visualização por meio de dendrogramas, que mostram como os clusters se unem hierarquicamente. 
+Suas limitações são que ele é computacionalmente mais custoso que K-Means para grandes datasets, e ele é sensível a outliers.
+
 ![Cluster de Clientes Agglomerative](https://github.com/user-attachments/assets/13e6611b-4961-4990-a719-c231ce933964)
 
-## Primeiras Linhas do Dataset
+## Dataset
 
 ```plaintext
   InvoiceNo StockCode                          Description  Quantity         InvoiceDate  UnitPrice  CustomerID         Country
@@ -101,7 +112,6 @@ memory usage: 33.1+ MB```
 
 ### Cluster Analysis - KMeans
 
-```plaintext
                  CustomerID    Frequency     TotalSpent  TotalQuantity  DBSCAN_Cluster  Agglomerative_Cluster
 KMeans_Cluster
 0               15301.41028    83.146562    1601.825493     937.420468       -0.002778                    0.0
