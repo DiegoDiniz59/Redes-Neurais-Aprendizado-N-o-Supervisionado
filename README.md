@@ -65,6 +65,12 @@ Clientes únicos, com padrões de comportamento bastante diferentes do restante.
 
 ### 4) Realizar testes sobre outros métodos de clustering (DBSCAN, Agglomerative) e os benefícios de diferentes abordagens, dependendo dos dados.
 
+![Cluster de Clientes](https://github.com/user-attachments/assets/fe745fb6-4de1-4612-96f5-b0d4cd3011d3)
+
+![Cluster de Clientes DBSCAN](https://github.com/user-attachments/assets/d6639abf-4932-4103-8435-695ca45983a7)
+
+![Cluster de Clientes Agglomerative](https://github.com/user-attachments/assets/13e6611b-4961-4990-a719-c231ce933964)
+
 ## Primeiras Linhas do Dataset
 
 ```plaintext
@@ -91,8 +97,6 @@ Data columns (total 8 columns):
 dtypes: datetime64 , float64(2), int64(1), object(4)
 memory usage: 33.1+ MB```
 
-![Cluster de Clientes](https://github.com/user-attachments/assets/fe745fb6-4de1-4612-96f5-b0d4cd3011d3)
-
 ## Análise dos Clusters
 
 ### Cluster Analysis - KMeans
@@ -104,15 +108,10 @@ KMeans_Cluster
 1               16661.00000   711.750000  225721.652500  103007.250000       -1.000000                    1.0
 2               14649.00000  2395.133333   72682.466000   47137.600000       -1.000000                    1.2
 
-![Cluster de Clientes DBSCAN](https://github.com/user-attachments/assets/d6639abf-4932-4103-8435-695ca45983a7)
-
                   CustomerID    Frequency    TotalSpent  TotalQuantity  KMeans_Cluster  Agglomerative_Cluster
 DBSCAN_Cluster
 -1              15123.129032  1447.290323  78832.552258   44539.161290        1.096774               0.709677
  0              15301.684003    81.963780   1501.648197     879.289064        0.000000               0.000000
-
-
- ![Cluster de Clientes Agglomerative](https://github.com/user-attachments/assets/13e6611b-4961-4990-a719-c231ce933964)
 
                           CustomerID    Frequency     TotalSpent  TotalQuantity  KMeans_Cluster  DBSCAN_Cluster
 Agglomerative_Cluster
