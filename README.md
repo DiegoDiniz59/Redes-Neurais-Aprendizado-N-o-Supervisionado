@@ -39,10 +39,6 @@ Essas mudanças revelam novos perfis, como clientes com baixo rendimento e gasto
 
 ![Cluster de Clientes](https://github.com/user-attachments/assets/80417f90-6248-4817-be00-6819ccf20922)
 
- "name": "stdout",
-     "output_type": "stream",
-     "text": [
-
 Analisando os Clusters, nós temos:
 
 Cluster 1 (Roxo) - Denso e Compacto:
