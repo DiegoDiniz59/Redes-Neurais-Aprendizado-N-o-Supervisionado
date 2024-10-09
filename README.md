@@ -59,4 +59,8 @@ Este é o grupo com menor número de clientes, localizado mais distante dos dema
 
 Clientes únicos, com padrões de comportamento bastante diferentes do restante. Fazem compras de alto valor, mas com baixa frequência. São grandes investidores e clientes corporativos num geral.
 
+### 4) Realizar testes sobre outros métodos de clustering (DBSCAN, Agglomerative) e os benefícios de diferentes abordagens, dependendo dos dados.
+
+
+
 
