@@ -35,6 +35,28 @@ Subdivisão dos Grupos Originais: Um dos clusters originais pode ser dividido em
 Clusters mais semelhantes: Com um número maior de clusters, cada grupo será mais específico, o que facilita a criação de estratégias de marketing mais direcionadas, mas pode perder generalização e aplicabilidade prática.
 Essas mudanças revelam novos perfis, como clientes com baixo rendimento e gastos elevados (talvez consumidores impulsivos), ou ajudar a distinguir melhor entre consumidores que possuem padrões de compra diferentes, mas rendas semelhantes.
 
+### 3) Tentar outro dataset do Kaggle para exercitar a técnica com dados diferentes.
 
+![Cluster de Clientes](https://github.com/user-attachments/assets/80417f90-6248-4817-be00-6819ccf20922)
+
+Analisando os Clusters, nós temos:
+
+Cluster 1 (Roxo) - Denso e Compacto:
+
+Este cluster contém a maioria dos pontos e é o mais concentrado, com baixa variação em termos de PCA 1 e PCA 2. 
+
+Representa um grupo de clientes com compras frequentes de valor médio-baixo. Alta recorrência e fidelidade, além de um comportamento estável e previsível.
+
+Cluster 2 (Amarelo) - Distribuição Média:
+
+Este grupo apresenta maior dispersão, indicando que os clientes aqui são mais diferentes em termos de características. 
+
+Eles têm comportamento variado, fazem compras esporádicas com valores variados. São moderados em termos de frequência e valor de compra. São clientes ocasionais e que gastam mais em períodos específicos.
+
+Cluster 3 (Verde) - Disperso e Isolado:
+
+Este é o grupo com menor número de clientes, localizado mais distante dos demais clusters.
+
+Clientes únicos, com padrões de comportamento bastante diferentes do restante. Fazem compras de alto valor, mas com baixa frequência. São grandes investidores e clientes corporativos num geral.
 
 
